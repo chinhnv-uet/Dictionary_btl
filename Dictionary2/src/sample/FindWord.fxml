@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="PaneFW" prefHeight="437.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerFindWordGUI">
+   <children>
+      <ImageView fitHeight="437.0" fitWidth="872.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@dictionary_bgr.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="27.0" layoutY="16.0" text="Find:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="SearchTF" layoutX="63.0" layoutY="17.0" onKeyPressed="#HandleKeyPressedSearchTF" prefHeight="26.0" prefWidth="184.0" />
+      <TextArea fx:id="ShowMeaning" layoutX="222.0" layoutY="104.0" prefHeight="333.0" prefWidth="526.0" />
+      <Button fx:id="SearchButton" layoutX="260.0" layoutY="17.0" mnemonicParsing="false" onAction="#HandleEventSearch" text="Search" />
+      <Button alignment="CENTER_RIGHT" blendMode="SOFT_LIGHT" layoutX="18.0" layoutY="86.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="114.0" text="Find Word">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@64aff288bdefabf522e70beefda97cba_icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="transTextButton" alignment="CENTER_RIGHT" layoutX="18.0" layoutY="132.0" mnemonicParsing="false" onAction="#HandleEventTTButton" prefHeight="46.0" prefWidth="114.0" text="Trans text" textAlignment="RIGHT">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@google-translate-icon-15.jpg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="VoiceButton" alignment="CENTER_RIGHT" layoutX="525.0" layoutY="67.0" mnemonicParsing="false" onAction="#HandleEventTextToSpeech" prefHeight="29.0" prefWidth="36.0">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@1200px-Sound-icon.svg.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="ChangeMeaningButton" layoutX="613.0" layoutY="69.0" mnemonicParsing="false" onAction="#HandleChangeWord" text="Change" />
+      <Button fx:id="DeleteWordButton" layoutX="683.0" layoutY="69.0" mnemonicParsing="false" onAction="#HandleEventDeleteWord" text="Delete" />
+      <Label layoutX="217.0" layoutY="82.0" prefHeight="18.0" prefWidth="61.0" text="Definition" />
+      <Button layoutX="525.0" layoutY="17.0" mnemonicParsing="false" onAction="#HandleEventAddNewWord" prefHeight="26.0" prefWidth="95.0" text="Add new word" />
+   </children>
+</AnchorPane>

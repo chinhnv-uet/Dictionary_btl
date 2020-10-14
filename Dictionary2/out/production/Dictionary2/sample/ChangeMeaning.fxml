@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="PaneCM" prefHeight="437.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerChangeMeaningGUI">
+   <children>
+      <ImageView fitHeight="437.0" fitWidth="872.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@dictionary_bgr.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="SaveButton" layoutX="447.0" layoutY="374.0" mnemonicParsing="false" onAction="#SaveEvent" prefHeight="26.0" prefWidth="51.0" text="Save" />
+      <Button fx:id="CancelButton" layoutX="530.0" layoutY="374.0" mnemonicParsing="false" onAction="#CancelButton" text="Cancel" />
+      <TextArea fx:id="Meaning" layoutX="330.0" layoutY="119.0" prefHeight="200.0" prefWidth="354.0" />
+      <TextField fx:id="Word" layoutX="330.0" layoutY="39.0" prefHeight="26.0" prefWidth="354.0" />
+      <Label layoutX="26.0" layoutY="14.0" prefHeight="38.0" prefWidth="195.0" text="Change word">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Pronun" layoutX="330.0" layoutY="79.0" prefHeight="26.0" prefWidth="354.0" />
+      <Label layoutX="250.0" layoutY="43.0" text="word:" />
+      <Label layoutX="250.0" layoutY="83.0" text="pronunciation:" />
+      <Label layoutX="250.0" layoutY="125.0" text="Meaning:" />
+   </children>
+</AnchorPane>
